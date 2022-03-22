@@ -105,3 +105,41 @@ changePageButton.onclick = function () {
   gameList.style.listStyleType = "none";
   gameList.style.padding = 0;
 };
+
+//Question 7
+var toys = [
+  {
+    name: "Lego",
+    price: 15.6,
+  },
+  {
+    name: "Master of the Universe",
+    price: "28.3",
+  },
+  {
+    name: "Barbie",
+    price: null,
+  },
+  {
+    name: "Mr Potato Head",
+    price: 89.99,
+  },
+];
+
+var priceButton = document.querySelector(".price");
+var total = document.querySelector("#total");
+var totalPrice = 0;
+var toyPrice;
+
+priceButton.onclick = function () {
+  for (var i = 0; i < toys.length; i++) {
+    toyPrice = parseFloat(toys[i].price);
+    if (toyPrice !== null && isNaN(toyPrice) === false) {
+      totalPrice = totalPrice + toyPrice;
+    }
+  }
+
+  totalPrice = totalPrice.toFixed(2);
+
+  total.innerHTML = "Total price: " + totalPrice;
+};
