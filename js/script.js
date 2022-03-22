@@ -97,7 +97,7 @@ var pageHeading1 = document.querySelector("h1");
 
 changePageButton.onclick = function () {
   pageTitle.innerHTML = "Updated title";
-  //pageBody.style.backgroundColor = "yellow";
+  pageBody.style.backgroundColor = "yellow";
   pageHeading1.style.color = "green";
   pageHeading1.style.fontFamily = "impact";
   pageHeading1.innerHTML =
