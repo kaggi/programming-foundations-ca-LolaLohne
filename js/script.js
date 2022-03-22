@@ -89,3 +89,19 @@ subtractionResult.innerHTML = subtraction(1, 42);
 //subtractionResult.innerHTML = subtraction(null, 123);
 
 //Question 6
+
+var changePageButton = document.querySelector(".page");
+var pageTitle = document.querySelector("title");
+var pageBody = document.querySelector("body");
+var pageHeading1 = document.querySelector("h1");
+
+changePageButton.onclick = function () {
+  pageTitle.innerHTML = "Updated title";
+  pageBody.style.backgroundColor = "yellow";
+  pageHeading1.style.color = "green";
+  pageHeading1.style.fontFamily = "impact";
+  pageHeading1.innerHTML =
+    '<a href="#">Programming Foundations Course Assignment</a>';
+  gameList.style.listStyleType = "none";
+  gameList.style.padding = 0;
+};
